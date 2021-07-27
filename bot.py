@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 import os
 import time
 
@@ -24,17 +25,16 @@ class Browser:
         self.g2Test = not self.gTest
     
     def open(self):
-        """
         op = webdriver.ChromeOptions()
         op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         op.add_argument("--headless")
         op.add_argument("--no-sandbox")
         op.add_argument("--disable-dev-sh-usage")
         self.driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
-        """
-        options = webdriver.ChromeOptions()
-        options.binary_location = "/app/.apt/usr/bin/google-chrome-stable"
-        self.driver = webdriver.Chrome(chrome_options=options)
+        
+        #options = webdriver.ChromeOptions()
+        #options.binary_location = "/app/.apt/usr/bin/google-chrome-stable"
+        #self.driver = webdriver.Chrome(chrome_options=options)
         #self.driver = webdriver.Chrome(ChromeDriverManager.install())
 
     def login(self):

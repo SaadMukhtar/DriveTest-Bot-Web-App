@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script
+type="/javascript"
+src="/static/js/home.js"
+></script>
+  
+    <title>DriveTest Bot</title>
+
+  </head>
+
+  <body>
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light fixed-top" style="background-color: black;">
+      <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='whiteTitle.png') }}" width="200" height="30" class="d-inline-block align-top" alt="">
+        
+      </a>
+    </nav>
+
+
+    <div class="jumbotron" style="height: 38rem;">
+
+      <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col ">
+            <div class="row">
+            <img src="{{ url_for('static', filename='Title.png') }}" class="text-center" style="min-width: 70%;">
+          </div>
+            <p class="lead text-center" style="font-size: 1.5rem;">The fastest driver's test booking bot in Canada.</p>
+         
+        </div>
+          <div class="col">
+            <form method="GET" action="login">
+            <button class="btn btn-primary login" style="margin: 10% 25%; height: 40%; width: 50%; font-size: 1.25rem;">Login</button> 
+          </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h1 class="featurette-heading" style="padding-bottom: 10%;"> Get alerts for the next <span style="font-weight: 600;"> cancellation</span></h1>
+          <p class="lead" style="padding-bottom: 6%;">Everyday, there is always a handful number of people cancelling their driver's test at every location.</p>
+          <p class="lead">Run this bot and become notified whenever someone does, to reserve your own test!</p>
+        </div>
+        <div class="col-md-5">
+          <img class="img-fluid mx-auto" style="max-width: 100%;" src="{{ url_for('static', filename='calendar.png') }}">
+  
+        </div>
+      </div>
+
+  
+      <!-- /END THE FEATURETTES -->
+      <hr class="featurette-divider">
+
+      
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <h2 style="line-height: 4; font-weight: 500;">Technologies Used:</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <img src="{{ url_for('static', filename='python.png') }}" width="140" height="140" style="margin-bottom: 15%; max-width: 75%;" >
+          <!--<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>-->
+  
+          <h2>Python</h2>
+          <p>Used to create the script's main logic and alert system with it's object oriented programming principles.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img src="{{ url_for('static', filename='selenium.png') }}" width="140" height="140" style="margin-bottom: 15%;" >
+
+          <h2>Selenium</h2>
+          <p>Used for automation and web scraping inside Python.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img src="{{ url_for('static', filename='flask.png') }}" width="140" height="140" style="margin-bottom: 15%;" >
+          
+          <h2>Flask</h2>
+          <p>Serves as a back-end for the application; stores the script while also providing an opportunity for a front-end UI.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <img src="{{ url_for('static', filename='bootstrap.png') }}" width="140" height="140" style="margin-bottom: 15%;" >
+          
+          <h2>Bootstrap</h2>
+          <p>Alongside HTML, CSS, and Javascript, forms the user friendly front-end of this application.</p>
+         
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <hr class="featurette-divider">
+
+
+        <div class="container h-100" style="margin-top: 5%;">
+          <div class="row h-100 justify-content-center align-items-center" style="height: 100%;">
+            <div class="col">
+              <img src="{{ url_for('static', filename='github.png') }}" style="max-width: 50%; margin-left: 40%; margin-bottom: 10%;" >
+
+          </div>
+            <div class="col">
+              <button onclick="document.location.href='https://github.com/SaadMukhtar'" class="btn btn-dark"  style=" height: 40%;  min-width: 50%; margin-right: 40%; margin-bottom: 10%; font-size: 1.25rem;">Repository</button> 
+            </div>
+          </div>
+  
+        </div>
+
+        <hr class="featurette-divider">
+        <footer class="text-muted">
+          <div class="container">
+            <p class="float-right">
+              <a href="#">Back to top</a>
+            </p>
+            <p>Developed by Saad Mukhtar.</p>
+            <p>Please contact saadmukhtar01@gmail.com for any inquiries or issues.</p>
+          </div>
+        </footer>
+
+        
+    
+  </body>

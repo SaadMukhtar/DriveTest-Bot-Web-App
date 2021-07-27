@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+      />
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
+
+      <title>Signin - DriveTest Bot</title>
+    </head>
+    <body class="text-center">
+      <!-- Image and text -->
+      <nav class="navbar navbar-light" style="background-color: black">
+        <a class="navbar-brand" href="#">
+          <img
+            src="{{ url_for('static', filename='whiteTitle.png') }}"
+            width="200"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+        </a>
+      </nav>
+
+      <div class="jumbotron h-100" style="margin: 3% 20%; min-width: 60%">
+        <img
+          src="{{ url_for('static', filename='Title.png') }}"
+          style="max-width: 100%"
+        />
+        <form method="POST" action="search">
+          <div class="form-group">
+            <label style="margin-top: 5%" for="exampleInputEmail1"
+              >Email address</label
+            >
+            <input
+              style="width: 50%; margin: 0 25%"
+              type="email"
+              class="form-control rounded-top"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="name@email.com"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <label for="licence">Driver's Licence Number</label>
+          <input
+            class="form-control"
+            style="max-width: 50%; margin: 0 25%; text-align: center"
+            type="text"
+            name="number"
+            id="number"
+            placeholder="_____-_____-_____"
+            required
+          /><br />
+          <label for="expiry">Driver's Licence expiry</label>
+          <input
+            class="form-control"
+            style="max-width: 50%; margin: 0 25%; text-align: center"
+            type="text"
+            name="expiry"
+            id="expiry"
+            placeholder="YYYY/MM/DD"
+            required
+          /><br />
+          <input
+            type="checkbox"
+            name="thisMonth"
+            value="thisMonth"
+            id="thisMonth"
+          />
+          <label for="thisMonth">This Month</label><br />
+          <input
+            type="checkbox"
+            name="nextMonth"
+            value="nextMonth"
+            id="nextMonth"
+          />
+          <label for="thisMonth">Next Month</label><br />
+          <label for="g2">G2</label>
+          <input type="radio" name="test" id="g2" value="G2" required />
+          <label for="g">G</label>
+          <input type="radio" name="test" id="g" value="G" /><br />
+          <button
+            type="submit"
+            class="btn btn-success"
+            style="
+              margin: 10% 25%;
+              height: 40%;
+              width: 50%;
+              min-width: 50%;
+              font-size: 100%;
+            "
+          >
+            Start Checking
+          </button>
+        </form>
+      </div>
+    </body>
+  </html>
+</html>

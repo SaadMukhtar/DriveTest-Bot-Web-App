@@ -18,7 +18,7 @@ def login():
 def search():
     if request.method == 'POST':
 
-        email = request.form.get("email")
+        email = request.form.get("exampleInputEmail1")
         licenseNumber = request.form.get("number")
         expiry = request.form.get("expiry")
         thisMonth = request.form.get("thisMonth") == "thisMonth"

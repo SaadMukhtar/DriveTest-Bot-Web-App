@@ -30,9 +30,13 @@
 
       <title>Signin - DriveTest Bot</title>
     </head>
-    <body class="text-center">
+    <body class="text-center" style="background-image: url('static/city.jpeg')">
       <!-- Image and text -->
-      <nav class="navbar navbar-light" style="background-color: black">
+      <nav
+        class="navbar navbar-light"
+        onclick="document.location.href='/'"
+        style="background-color: black"
+      >
         <a class="navbar-brand" href="#">
           <img
             src="{{ url_for('static', filename='whiteTitle.png') }}"

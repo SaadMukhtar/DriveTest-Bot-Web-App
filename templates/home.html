@@ -20,30 +20,39 @@ src="/static/js/home.js"
   <body>
 
     <!-- Image and text -->
-    <nav class="navbar navbar-light fixed-top" style="background-color: black;">
+    <nav class="navbar navbar-light fixed-top" onclick="document.location.href='/'" style="background-color: black;">
       <a class="navbar-brand" href="#">
-        <img src="{{ url_for('static', filename='whiteTitle.png') }}" width="200" height="30" class="d-inline-block align-top" alt="">
+        <img src="{{ url_for('static', filename='whiteTitle.png') }}" width="200" height="30" class="d-inline-block align-top" >
         
       </a>
     </nav>
 
 
-    <div class="jumbotron" style="height: 38rem;">
+    
+    
+    <!--<img src="{{ url_for('static', filename='banner.jpg') }}" style="max-height: 50vw; width: 100%; z-index: -1;">-->
+    <div class="jumbotron d-flex align-items-center" style='min-height: 500px; height: 35vw; margin-top: 2.9vw; background-image: url("static/banner1.jpeg"); opacity: 1;'>
+      <div class="container d-flex align-items-center" style="height: 100%; ">
+        
+        <div class="row" style="align-content: center; min-width: 100%; background-color: rgba(101, 185, 211, 0.527); padding: 2vw" >
 
-      <div class="container h-100">
-        <div class="row h-100 justify-content-center align-items-center">
-          <div class="col ">
+          <div class="col align-self-center align-items-center">
+            <div class="row d-flex align-items-center">
+            <img src="{{ url_for('static', filename='Title.png') }}" style=" min-width: 50%;">
+            </div>
+
             <div class="row">
-            <img src="{{ url_for('static', filename='Title.png') }}" class="text-center" style="min-width: 70%;">
+            <p class="lead" style="text-align: center; width: 90%; margin: 0 10%; font-size: 1.5rem;">The fastest driver's test booking bot in Canada.</p>
+            </div>
           </div>
-            <p class="lead text-center" style="font-size: 1.5rem;">The fastest driver's test booking bot in Canada.</p>
-         
-        </div>
+
           <div class="col">
             <form method="GET" action="login">
-            <button class="btn btn-primary login" style="margin: 10% 25%; height: 40%; width: 50%; font-size: 1.25rem;">Login</button> 
-          </form>
+            <button class="btn btn-primary login" style="width: 80%; margin: 10% 10%; font-size: 1.25rem;">Login</button> 
+            </form>
           </div>
+
+
         </div>
 
       </div>
@@ -59,12 +68,12 @@ src="/static/js/home.js"
   
       <div class="row featurette">
         <div class="col-md-7">
-          <h1 class="featurette-heading" style="padding-bottom: 10%;"> Get alerts for the next <span style="font-weight: 600;"> cancellation</span></h1>
-          <p class="lead" style="padding-bottom: 6%;">Everyday, there is always a handful number of people cancelling their driver's test at every location.</p>
-          <p class="lead">Run this bot and become notified whenever someone does, to reserve your own test!</p>
+          <h1 class="featurette-heading" style="margin: 0 10%; padding-bottom: 10%;"> Get alerts for the next <span style="font-weight: 600;"> cancellation</span></h1>
+          <p class="lead" style="margin: 0 10%; padding-bottom: 6%;">Everyday, there is always a handful number of people cancelling their driver's test at every location.</p>
+          <p class="lead" style="margin: 0 10%;">Run this bot and become notified whenever someone does, to reserve your own test!</p>
         </div>
         <div class="col-md-5">
-          <img class="img-fluid mx-auto" style="max-width: 100%;" src="{{ url_for('static', filename='calendar.png') }}">
+          <img  style="margin: 5% 10%; min-width: 200px; max-width: 22vw;" src="{{ url_for('static', filename='calendar.png') }}">
   
         </div>
       </div>
@@ -77,35 +86,35 @@ src="/static/js/home.js"
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <h2 style="line-height: 4; font-weight: 500;">Technologies Used:</h2>
+        <h2 style="margin: 0 10%; line-height: 4; font-weight: 500;">Technologies Used:</h2>
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <img src="{{ url_for('static', filename='python.png') }}" width="140" height="140" style="margin-bottom: 15%; max-width: 75%;" >
+          <img src="{{ url_for('static', filename='python.png') }}" style="margin: 0 10%; margin-bottom: 5%; min-width: 100px; max-width: 7.5vw;" >
           <!--<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>-->
   
-          <h2>Python</h2>
+          <h2 style="margin: 0 10%;">Python</h2>
           <p>Used to create the script's main logic and alert system with it's object oriented programming principles.</p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
-          <img src="{{ url_for('static', filename='selenium.png') }}" width="140" height="140" style="margin-bottom: 15%;" >
+          <img src="{{ url_for('static', filename='selenium.png') }}" style="margin: 0 10%; margin-bottom: 5%; min-width: 100px; max-width: 8.5vw;"  >
 
-          <h2>Selenium</h2>
+          <h2 style="margin: 0 10%;">Selenium</h2>
           <p>Used for automation and web scraping inside Python.</p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
-          <img src="{{ url_for('static', filename='flask.png') }}" width="140" height="140" style="margin-bottom: 15%;" >
+          <img src="{{ url_for('static', filename='flask.png') }}" style="margin: 0 10%; margin-bottom: 5%; min-width: 100px; max-width: 5.5vw;" >
           
-          <h2>Flask</h2>
+          <h2 style="margin: 0 10%;">Flask</h2>
           <p>Serves as a back-end for the application; stores the script while also providing an opportunity for a front-end UI.</p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-3">
-          <img src="{{ url_for('static', filename='bootstrap.png') }}" width="140" height="140" style="margin-bottom: 15%;" >
+          <img src="{{ url_for('static', filename='bootstrap.png') }}" style="margin: 0 10%; margin-bottom: 5%; min-width: 100px; max-width: 9vw;" >
           
-          <h2>Bootstrap</h2>
+          <h2 style="margin: 0 10%;">Bootstrap</h2>
           <p>Alongside HTML, CSS, and Javascript, forms the user friendly front-end of this application.</p>
          
         </div><!-- /.col-lg-4 -->
@@ -116,11 +125,11 @@ src="/static/js/home.js"
         <div class="container h-100" style="margin-top: 5%;">
           <div class="row h-100 justify-content-center align-items-center" style="height: 100%;">
             <div class="col">
-              <img src="{{ url_for('static', filename='github.png') }}" style="max-width: 50%; margin-left: 40%; margin-bottom: 10%;" >
+              <a href="https://github.com/SaadMukhtar/DriveTest-Bot-Web-App" target="_blank"><img src="{{ url_for('static', filename='github.png') }}" style="max-width: 50%; margin-left: 40%; margin-bottom: 10%;" ></a>
 
           </div>
             <div class="col">
-              <button onclick="document.location.href='https://github.com/SaadMukhtar'" class="btn btn-dark"  style=" height: 40%;  min-width: 50%; margin-right: 40%; margin-bottom: 10%; font-size: 1.25rem;">Repository</button> 
+              <button onclick="window.open('https://github.com/SaadMukhtar/DriveTest-Bot-Web-App');" class="btn btn-dark"  style=" height: 40%;  min-width: 50%; margin-right: 40%; margin-bottom: 10%; font-size: 1.25rem;">Repository</button> 
             </div>
           </div>
   

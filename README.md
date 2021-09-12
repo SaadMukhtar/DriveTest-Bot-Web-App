@@ -1,5 +1,5 @@
 # DriveTest Booking Bot Web App
-DriveTest Bot alerts user whenever a driver's test spot open up. 
+DriveTest Bot alerts users whenever a driver's test spot open up. 
 
 It uses Flask and Heroku to deploy the backend, as well as HTML/CSS/JavaScript/Bootstrap for frontend. This was used to book my very own G licence driver's test! 
 

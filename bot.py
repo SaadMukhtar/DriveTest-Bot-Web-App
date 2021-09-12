@@ -23,20 +23,24 @@ class Browser:
         else:
             self.gTest = False
         self.g2Test = not self.gTest
-    
+        #self.driver = webdriver.Chrome(ChromeDriverManager.install())
+        self.driver = 1
+        driver = webdriver.Chrome('/home/prodigy/.wdm/driv')
+        self.driver = driver1
+
     def open(self):
+        x = 1
         op = webdriver.ChromeOptions()
         op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         op.add_argument("--headless")
         op.add_argument("--no-sandbox")
         op.add_argument("--disable-dev-sh-usage")
-        self.driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
         
         #options = webdriver.ChromeOptions()
         #options.binary_location = "/app/.apt/usr/bin/google-chrome-stable"
         #self.driver = webdriver.Chrome(chrome_options=options)
         #self.driver = webdriver.Chrome(ChromeDriverManager.install())
-
+        
     def login(self):
         # Load Website
         self.driver.get(self.url)
